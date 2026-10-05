@@ -1,3 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.exe filter=lfs diff=lfs merge=lfs -text
+# Downloadable programs are stored as plain binary files
+*.exe binary
+*.apk binary
+*.gz binary
+*.zip binary
