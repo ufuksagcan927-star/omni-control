@@ -6,11 +6,13 @@ Omni Control is a remote management application that lets you control and monito
 
 | File | Install on |
 |---|---|
-| [OmniControl.apk](OmniControl.apk) | Android phone |
-| [OmniControl.exe](OmniControl.exe) | Windows PC |
-| [OmniControl-linux-x64.tar.gz](OmniControl-linux-x64.tar.gz) | Linux PC: Ubuntu 22.04 or newer, Linux Mint 21 or newer, Debian 12, Pardus 23 |
-| [OmniControl-mac-AppleSilicon.zip](OmniControl-mac-AppleSilicon.zip) | Mac with an Apple chip (M1, M2, M3...), **beta** |
-| [OmniControl-mac-Intel.zip](OmniControl-mac-Intel.zip) | Mac with an Intel processor, **beta** |
+| [OmniControl.apk](https://github.com/ufuksagcan927-star/omni-control/raw/main/OmniControl.apk) | Android phone |
+| [OmniControl.exe](https://github.com/ufuksagcan927-star/omni-control/raw/main/OmniControl.exe) | Windows PC |
+| [OmniControl-linux-x64.tar.gz](https://github.com/ufuksagcan927-star/omni-control/raw/main/OmniControl-linux-x64.tar.gz) | Linux PC: Ubuntu 22.04 or newer, Linux Mint 21 or newer, Debian 12, Pardus 23, Arch Linux and systems built on it (Garuda, Manjaro...) |
+| [OmniControl-mac-AppleSilicon.zip](https://github.com/ufuksagcan927-star/omni-control/raw/main/OmniControl-mac-AppleSilicon.zip) | Mac with an Apple chip (M1, M2, M3...), **beta** |
+| [OmniControl-mac-Intel.zip](https://github.com/ufuksagcan927-star/omni-control/raw/main/OmniControl-mac-Intel.zip) | Mac with an Intel processor, **beta** |
+
+Clicking a file name downloads it.
 
 Install the app on your phone and the program on your computer, then connect with the QR code or the password the computer shows.
 
@@ -25,11 +27,15 @@ Install the app on your phone and the program on your computer, then connect wit
 
 ## Running on Linux
 
-1. Put the file in a folder, right-click inside the folder, choose "Open in Terminal" and run:
-   `tar xzf OmniControl-linux-x64.tar.gz && ./OmniControl`
-2. Screen sharing and mouse control need an Xorg session. If you log in with Wayland, pick "Xorg" on the login screen (on Ubuntu: "Ubuntu on Xorg").
+1. Right-click the downloaded file and choose "Extract Here" or "Extract" (on KDE desktops such as Garuda: "Extract" > "Extract archive here"). Then double-click the extracted OmniControl file; if that does not start it, right-click it and choose "Run as a Program". Extract it first: started from inside the archive window it may not open.
+   Or in a terminal opened in the folder with the file: `tar xzf OmniControl-linux-x64.tar.gz && ./OmniControl`
+2. Screen sharing and mouse control need an Xorg (X11) session. If you log in with Wayland, pick the X11 session on the login screen: "Ubuntu on Xorg" on Ubuntu, "Plasma (X11)" on KDE desktops. Garuda and other Arch-based KDE systems need it installed first: `sudo pacman -S plasma-x11-session`, then log out.
 
-If the phone cannot find the computer, a firewall may be blocking it: `sudo ufw allow 8765/tcp && sudo ufw allow 8766/udp`
+If the phone cannot find the computer, a firewall may be blocking it:
+*   Ubuntu, Mint, Pardus: `sudo ufw allow 8765/tcp && sudo ufw allow 8766/udp`
+*   Fedora, Garuda and other systems with firewalld: `sudo firewall-cmd --permanent --add-port=8765/tcp --add-port=8766/udp && sudo firewall-cmd --reload`
+
+If no window appears, start it from a terminal (`./OmniControl`) and send us what it prints, or the file `~/.config/OmniControl/OmniControl_error.log`.
 
 ## Running on a Mac (beta)
 
@@ -40,7 +46,7 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## Platform Support
 
-*   **Computer:** Windows, Linux (Xorg sessions), macOS (beta).
+*   **Computer:** Windows, Linux (Xorg sessions; on Wayland the program runs but cannot share the screen or move the mouse), macOS (beta).
 *   **Mobile:** Android (APK provided).
 
 ## What's new
