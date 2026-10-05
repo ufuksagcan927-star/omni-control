@@ -45,6 +45,11 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## What's new
 
+### 5 October 2026, second update
+
+*   **Linux typing fix:** letters the keyboard layout does not have (Turkish letters on an English layout, other languages, emoji) are no longer mixed up or lost when the program you type into is busy.
+*   **Under the hood:** the computer program and the phone app are now organized in one part per feature, which keeps future changes safer. They look and work the same as before.
+
 ### 5 October 2026
 
 *   **Linux and macOS (beta):** the computer program now runs on Linux and on Macs as well as on Windows.
