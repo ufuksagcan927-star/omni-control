@@ -51,6 +51,14 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## What's new
 
+### 6 October 2026
+
+*   **Linux on Arch-based systems (Garuda, Manjaro, EndeavourOS):** tested on Arch Linux with an Xorg desktop and with KDE Plasma on Wayland. The program now uses the computer's own font library, so it no longer prints dozens of "Fontconfig error" lines or builds a second font cache when it first starts.
+*   **Linux tray icon in every language:** with the program set to Russian, Polish, Chinese and some other languages, the tray icon did not appear. Now it does.
+*   **Linux typing:** a letter the keyboard layout does not have was occasionally lost while typing. Fixed.
+*   **Wayland hint:** the message shown on a Wayland session now also names KDE's X11 session, "Plasma (X11)".
+*   The Windows and Android versions work the same as before.
+
 ### 5 October 2026, second update
 
 *   **Linux typing fix:** letters the keyboard layout does not have (Turkish letters on an English layout, other languages, emoji) are no longer mixed up or lost when the program you type into is busy.
