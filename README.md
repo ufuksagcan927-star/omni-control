@@ -29,11 +29,8 @@ Install the app on your phone and the program on your computer, then connect wit
 
 1. Right-click the downloaded file and choose "Extract Here" or "Extract" (on KDE desktops such as Garuda: "Extract" > "Extract archive here"). Then double-click the extracted OmniControl file; if that does not start it, right-click it and choose "Run as a Program". Extract it first: started from inside the archive window it may not open.
    Or in a terminal opened in the folder with the file: `tar xzf OmniControl-linux-x64.tar.gz && ./OmniControl`
-2. Screen sharing and mouse control need an Xorg (X11) session. If you log in with Wayland, pick the X11 session on the login screen: "Ubuntu on Xorg" on Ubuntu, "Plasma (X11)" on KDE desktops. Garuda and other Arch-based KDE systems need it installed first: `sudo pacman -S plasma-x11-session`, then log out.
-
-If the phone cannot find the computer, a firewall may be blocking it:
-*   Ubuntu, Mint, Pardus: `sudo ufw allow 8765/tcp && sudo ufw allow 8766/udp`
-*   Fedora, Garuda and other systems with firewalld: `sudo firewall-cmd --permanent --add-port=8765/tcp --add-port=8766/udp && sudo firewall-cmd --reload`
+2. If the computer's firewall keeps the phone out, the program's window says so and shows an **Allow** button. Click it and enter the password you sign in to the computer with; the phone can then find the computer. No terminal is needed.
+3. Screen sharing and mouse control need an Xorg (X11) session. If you log in with Wayland, pick the X11 session on the login screen: "Ubuntu on Xorg" on Ubuntu, "Plasma (X11)" on KDE desktops. Garuda and other Arch-based KDE systems need it installed first: `sudo pacman -S plasma-x11-session`, then log out. Desktops that only run Wayland, such as Hyprland or Sway, have no X11 session: there the program connects, but screen sharing and mouse control do not work yet.
 
 If no window appears, start it from a terminal (`./OmniControl`) and send us what it prints, or the file `~/.config/OmniControl/OmniControl_error.log`.
 
@@ -46,10 +43,16 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## Platform Support
 
-*   **Computer:** Windows, Linux (Xorg sessions; on Wayland the program runs but cannot share the screen or move the mouse), macOS (beta).
+*   **Computer:** Windows, Linux (Xorg sessions; on Wayland, Hyprland included, the program runs but cannot share the screen or move the mouse), macOS (beta).
 *   **Mobile:** Android (APK provided).
 
 ## What's new
+
+### 11 October 2026
+
+*   **Linux firewall:** on systems whose firewall is switched on (CachyOS, Garuda, EndeavourOS, Fedora and others) the phone could not find the computer at all. The program now notices this and shows an "Allow" button in its window; clicking it and entering the computer's password lets the phone in. Desktops without their own password window, such as Hyprland, get the program's own password box. Tested with both kinds of Linux firewall (ufw and firewalld).
+*   **Hyprland and other Wayland-only desktops:** the hint no longer tells you to pick an Xorg session that these desktops do not have; it says that screen sharing and mouse control do not work there yet.
+*   The Windows, Mac and Android versions work the same as before. The phone app did not change.
 
 ### 6 October 2026
 
