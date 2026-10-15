@@ -30,7 +30,8 @@ Install the app on your phone and the program on your computer, then connect wit
 1. Right-click the downloaded file and choose "Extract Here" or "Extract" (on KDE desktops such as Garuda: "Extract" > "Extract archive here"). Then double-click the extracted OmniControl file; if that does not start it, right-click it and choose "Run as a Program". Extract it first: started from inside the archive window it may not open.
    Or in a terminal opened in the folder with the file: `tar xzf OmniControl-linux-x64.tar.gz && ./OmniControl`
 2. If the computer's firewall keeps the phone out, the program's window says so and shows an **Allow** button. Click it and enter the password you sign in to the computer with; the phone can then find the computer. No terminal is needed.
-3. Screen sharing and mouse control need an Xorg (X11) session. If you log in with Wayland, pick the X11 session on the login screen: "Ubuntu on Xorg" on Ubuntu, "Plasma (X11)" on KDE desktops. Garuda and other Arch-based KDE systems need it installed first: `sudo pacman -S plasma-x11-session`, then log out. Desktops that only run Wayland, such as Hyprland or Sway, have no X11 session: there the program connects, but screen sharing and mouse control do not work yet.
+3. On Hyprland and Sway, screen sharing, mouse and keyboard work as they are (other desktops built on wlroots, such as river, Wayfire, labwc and niri, should too, but are untested). On GNOME's and KDE's Wayland sessions they do not: pick the X11 session on the login screen instead, "Ubuntu on Xorg" on Ubuntu, "Plasma (X11)" on KDE desktops. Garuda and other Arch-based KDE systems need it installed first: `sudo pacman -S plasma-x11-session`, then log out.
+4. "Start with the computer" also works on Hyprland and Sway: the program adds two lines, marked "Omni Control", to their settings file (`~/.config/hypr/hyprland.conf` or `hyprland.lua`, `~/.config/sway/config`) and removes them when you turn the option off.
 
 If no window appears, start it from a terminal (`./OmniControl`) and send us what it prints, or the file `~/.config/OmniControl/OmniControl_error.log`.
 
@@ -43,10 +44,16 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## Platform Support
 
-*   **Computer:** Windows, Linux (Xorg sessions; on Wayland, Hyprland included, the program runs but cannot share the screen or move the mouse), macOS (beta).
+*   **Computer:** Windows, Linux (Xorg sessions, and Wayland desktops built on wlroots such as Hyprland and Sway; on GNOME's and KDE's Wayland sessions the program runs but cannot share the screen or move the mouse), macOS (beta).
 *   **Mobile:** Android (APK provided).
 
 ## What's new
+
+### 15 October 2026
+
+*   **Hyprland and Sway:** screen sharing, the touchpad, tapping the picture and the keyboard (Turkish letters and emoji too) now work on Hyprland and Sway, with nothing to set up (other desktops built on wlroots, such as river, Wayfire, labwc and niri, should too, but are untested). A turned monitor, two monitors (the left one is shared) and 10-bit colour work too. Tested automatically on Hyprland 0.56 and Sway; nobody has tried it on a real Hyprland computer yet, so please report any problem.
+*   **Start with the computer on Hyprland and Sway:** these desktops do not start the programs other Linux desktops start at login. The program now adds two lines to their own settings file when you turn the option on, and takes them out again when you turn it off.
+*   The Windows, Mac and Android versions work the same as before. The phone app did not change.
 
 ### 11 October 2026
 
