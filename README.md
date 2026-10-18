@@ -49,11 +49,11 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## What's new
 
-### 15 October 2026
+### 18 October 2026
 
-*   **Hyprland and Sway:** screen sharing, the touchpad, tapping the picture and the keyboard (Turkish letters and emoji too) now work on Hyprland and Sway, with nothing to set up (other desktops built on wlroots, such as river, Wayfire, labwc and niri, should too, but are untested). A turned monitor, two monitors (the left one is shared) and 10-bit colour work too. Tested automatically on Hyprland 0.56 and Sway; nobody has tried it on a real Hyprland computer yet, so please report any problem.
+*   **Hyprland and Sway:** screen sharing, the touchpad, tapping the picture and the keyboard (Turkish letters and emoji too) now work on Hyprland and Sway, with nothing to set up (other desktops built on wlroots, such as river, Wayfire, labwc and niri, should too, but are untested). A turned monitor, two monitors (the left one is shared) and 10-bit colour work too. Screen sharing, the touchpad and the keyboard were tested automatically on Hyprland 0.56 and Sway; two monitors, 10-bit colour and starting with the computer only on Sway. Nobody has tried it on a real Hyprland computer yet, so please report any problem.
 *   **Start with the computer on Hyprland and Sway:** these desktops do not start the programs other Linux desktops start at login. The program now adds two lines to their own settings file when you turn the option on, and takes them out again when you turn it off.
-*   The Windows, Mac and Android versions work the same as before. The phone app did not change.
+*   The Windows, Mac and Android versions work the same as before. The phone app did not change, and the Mac files are still the 11 October ones (nothing in this update concerns Macs).
 
 ### 11 October 2026
 
