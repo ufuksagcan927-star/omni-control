@@ -49,6 +49,14 @@ The Mac version passes automatic tests on macOS 15 and macOS 26 (Apple chip and 
 
 ## What's new
 
+### 1 November 2026
+
+*   **Introduction tour:** the first time the phone app opens, it lights up each part of the main screen in turn and says what it does. It can be skipped, and Settings > "Show the introduction again" opens it again.
+*   **Computer program introduction:** the first time the program runs, its window opens with a short guide: how to connect the phone and what each tab is for. The Settings tab can open it again.
+*   **Program icon:** the Windows program now shows the Omni Control icon in Explorer, on the desktop and on its windows.
+*   Until a language is picked, the phone app now starts in the phone's own language when it has it.
+*   The Linux and Mac files are still the earlier ones.
+
 ### 18 October 2026
 
 *   **Hyprland and Sway:** screen sharing, the touchpad, tapping the picture and the keyboard (Turkish letters and emoji too) now work on Hyprland and Sway, with nothing to set up (other desktops built on wlroots, such as river, Wayfire, labwc and niri, should too, but are untested). A turned monitor, two monitors (the left one is shared) and 10-bit colour work too. Screen sharing, the touchpad and the keyboard were tested automatically on Hyprland 0.56 and Sway; two monitors, 10-bit colour and starting with the computer only on Sway. Nobody has tried it on a real Hyprland computer yet, so please report any problem.
