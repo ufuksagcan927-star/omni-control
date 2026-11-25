@@ -68,7 +68,8 @@ With a free Apple ID the app stops opening after 7 days; install it again the sa
 *   **Linux:** the program now opens the same animated window as on Windows (with its Home, Security and Settings pages and the QR code), using the computer's own WebKitGTK, which Ubuntu, Linux Mint, Debian, Pardus, Fedora and most GNOME, Cinnamon and MATE desktops have. Without it (some KDE and minimal systems) the earlier window opens.
 *   **Linux, Win key:** the phone's Win key now opens the desktop's menu or overview, and Win shortcuts such as Win+D work. It was pressed and let go in the same instant, which desktops ignored.
 *   **Linux and Mac:** the new logo in the tray, and everything from the earlier updates. The Linux program passes the automatic tests on Ubuntu 22.04, on Arch Linux with Xorg and on KDE's Wayland session.
-*   **Hyprland and Sway:** with the newest Hyprland and Sway on Arch Linux the automatic test now fails: the program starts and connects and screen sharing works, but the mouse taps, scrolling and the keyboard do not reach the window. This is being looked into; on these desktops please report what you see.
+*   **Hyprland (CachyOS, Garuda and others): the Win key and Win shortcuts now work.** Hyprland reads shortcuts by the key's place on the keyboard, and the program's keyboard had Win and the other keys in other places, so Win, Win+key and Ctrl shortcuts did nothing there. They now sit where a real keyboard has them. Tested automatically on Hyprland 0.57.2: the Win key, a Win shortcut from Hyprland's settings, typing (Turkish letters and emoji too), taps, clicks and scrolling all work.
+*   **Sway:** with one monitor everything passes the automatic test on the newest Sway. With two monitors the test still fails on Arch Linux's Sway; this is being looked into.
 
 ### 1 November 2026
 
