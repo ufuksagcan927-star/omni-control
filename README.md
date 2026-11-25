@@ -60,6 +60,14 @@ With a free Apple ID the app stops opening after 7 days; install it again the sa
 
 ## What's new
 
+### 25 November 2026
+
+*   **All files are now from the newest code.** The Linux and Mac files had stayed at the October ones; they are now built from the same code as the phone app's animated look.
+*   **Phone app (OmniControl.apk):** every button has its own animation, the connection bar is split in two (Local / Server), colours stay readable whatever theme is picked, and the animations keep playing when the phone's own animations are switched off. New logo: the mascot on a purple tile, in the app icon and in the opening animation.
+*   **Windows program (OmniControl.exe):** a new animated window with the same animations, own colours and a Settings page; the new logo in the tray and title bar.
+*   **Linux and Mac:** the new logo in the tray, and everything from the earlier updates. The Linux program passes the automatic tests on Ubuntu 22.04, on Arch Linux with Xorg and on KDE's Wayland session.
+*   **Hyprland and Sway:** with the newest Hyprland and Sway on Arch Linux the automatic test now fails: the program starts and connects and screen sharing works, but the mouse taps, scrolling and the keyboard do not reach the window. This is being looked into; on these desktops please report what you see.
+
 ### 1 November 2026
 
 *   **Introduction tour:** the first time the phone app opens, it lights up each part of the main screen in turn and says what it does. It can be skipped, and Settings > "Show the introduction again" opens it again.
