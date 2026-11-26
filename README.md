@@ -60,6 +60,10 @@ With a free Apple ID the app stops opening after 7 days; install it again the sa
 
 ## What's new
 
+### 26 November 2026
+
+*   **Linux on Hyprland and Sway, Turkish letters:** ş, ı, ç, İ and the other Turkish letters typed from the phone now reach Chrome, Brave, Edge, Discord, VS Code and other Chromium-based programs too. They used to be lost there; other programs were fine. Tested automatically on Hyprland 0.57.2 with Chromium. Emoji still do not reach these programs on Hyprland and Sway.
+
 ### 25 November 2026
 
 *   **All files are now from the newest code.** The Linux and Mac files had stayed at the October ones; they are now built from the same code as the phone app's animated look.
