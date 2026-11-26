@@ -62,6 +62,7 @@ With a free Apple ID the app stops opening after 7 days; install it again the sa
 
 ### 26 November 2026
 
+*   **Linux on Hyprland and Sway, several monitors:** with more than one monitor the cursor could land in the wrong place, because the program could take another monitor for the first one, and the picture and the taps then belonged to different monitors. They now always use the same monitor, the top-left one. Plugging a monitor in or out while the program runs is picked up too. Tested automatically on Sway with two monitors.
 *   **Linux on Hyprland and Sway, Turkish letters:** ş, ı, ç, İ and the other Turkish letters typed from the phone now reach Chrome, Brave, Edge, Discord, VS Code and other Chromium-based programs too. They used to be lost there; other programs were fine. Tested automatically on Hyprland 0.57.2 with Chromium. Emoji still do not reach these programs on Hyprland and Sway.
 
 ### 25 November 2026
